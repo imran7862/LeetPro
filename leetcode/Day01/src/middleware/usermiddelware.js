@@ -8,9 +8,9 @@ const userMiddleware = async (req, res, next) => {
         if (!token) {
             throw new Error('Token is not present');
         }
-
+        //verifying JWT Token 
         const payload = jwt.verify(token, process.env.JWT_SECRET);
-        console.log('Payload:', payload);
+        // console.log('Payload:', payload);
 
         const { emailId } = payload;
         if (!emailId) {

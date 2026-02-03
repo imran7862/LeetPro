@@ -6,7 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { checkAuth } from "./authSlice";
 import Admin from "./Pages/Admin";
-import ProblemPage from "./Pages/ProblemPage"
+import ProblemPage from "./Pages/ProblemPage";
+import AdminPanel from "./components/AdminPanel";
+import AdminDelete from "./components/AdminDelete"
 function App (){
 
 
