@@ -12,6 +12,7 @@ const register = async (req, res) => {
 
         const { firstName, emailId, password } = req.body;
         req.body.password = await bcrypt.hash(password, 10);
+        req.body.role = 'user';
         const user = await User.create(req.body);
 
         const token = jwt.sign({_id:user._id , emailId:emailId, role:'user' }, process.env.JWT_SECRET, { expiresIn: 60 * 60 });
