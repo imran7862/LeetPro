@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, NavLink } from 'react-router';
-import { registerUser } from '../authSlice';
+import { registerUser } from '../store/authSlice';
 
 const signupSchema = z.object({
   firstName: z.string().min(3, "Minimum character should be 3"),

@@ -4,7 +4,7 @@ import Login from "./Pages/login";
 import Signup from "./Pages/Signup";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { checkAuth } from "./authSlice";
+import { checkAuth } from "./store/authSlice";
 import Admin from "./Pages/Admin";
 import ProblemPage from "./Pages/ProblemPage";
 import AdminPanel from "./components/AdminPanel";
